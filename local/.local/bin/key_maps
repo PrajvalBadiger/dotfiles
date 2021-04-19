@@ -1,0 +1,33 @@
+#! /bin/bash
+
+# This script configures the keymaps 
+#+ swap Caps_Lock withth Escape
+
+# print key press with the command below and get the keycode
+# xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
+# xorgs key and key code 
+
+#	keys       |   key-code
+#+	-----------------------
+#+	Caps_Lock  |         66
+#+	Escape     |	      9
+
+
+# configure keys
+
+xmodmap -e 'keycode 66 = Escape'
+xmodmap -e 'keycode 9 = Caps_Lock'
+
+# clear caps lock because even after remap the caps lock
+#+ behaves as caps lock
+
+xmodmap -e 'clear lock'
+
+# make the changes persistent across reboots
+
+# generate config file
+# xmodmap -pke > .Xmodmap
+
+# source it in .profile
+
+# [[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap

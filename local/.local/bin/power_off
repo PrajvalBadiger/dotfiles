@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# dmenu to poweroff the system
+
+choice=$(echo -e "shutdown\nrestart\ncancel" | dmenu -p poweroff:)
+
+if [ "$choice" == "shutdown" ]; then
+
+	choice=$(echo -e "No\nYes" | dmenu -p "Do you want to Shutdown ? ")
+	[ "$choice" == "Yes" ] && shutdown now
+
+elif [ "$choice" == "restart" ]; then
+
+	choice=$(echo -e "No\nYes" | dmenu -p "Do you want to Restart ? ")
+	[ "$choice" == "Yes" ] && reboot
+
+elif [ "$choice" == "cancel" ]; then
+	exit 0
+fi
+
+exit 0

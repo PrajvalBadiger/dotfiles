@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# battery percentage and status script
+
+battery="/sys/class/power_supply/BAT0"
+percentage="$(cat "$battery/capacity")"
+
+case "$(cat "$battery/status")" in
+	"Full") status="⚡" ;;
+	"Discharging") status="🔋" ;;
+	"Charging") status="🔌" ;;
+	"Not charging") status="🛑" ;;
+	"Unknown") status="♻️" ;;
+esac
+
+# low battery incicator
+[ "$status" = "🔋" ] && [ "$percentage" -le 25 ] && status="❗"
+
+echo "$status$percentage%"

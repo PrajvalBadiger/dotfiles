@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# startup script for dwm 
+
+# increase key repeat speed
+xset r rate 250 30
+
+# restore keymaps
+key_maps
+
+# restore wallpaper
+feh --no-fehbg --bg-scale '$HOME/pix/wall/0318.jpg' 
+
+# notification service
+dunst &
+
+# unclutter - dont display mouse when not in use
+unclutter &
+
+# run compositor - transparency
+picom -C -b
+
+# run dwmblocks - dwm status bar
+dwmblocks &
+
+# dwm restart loop
+while :; do
+    # log stderror to a file 
+	# dwm 2> ~/.dwm.log
+    # no error logging
+    dwm >/dev/null 2>&1
+done

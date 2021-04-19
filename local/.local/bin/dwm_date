@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# get current date and time
+dat=$(date '+%a %b %d')
+tim=$(date '+%H:%M')
+
+echo "🗓️ $dat ⏳ $tim "

@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# screen brightness script
+
+brightness=$(xbacklight -get | sed 's|\.[0-9]*||')
+
+echo "🔆$brightness%"

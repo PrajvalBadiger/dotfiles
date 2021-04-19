@@ -1,7 +1,21 @@
 #!/bin/sh
 
-# get current date and time
-dat=$(date '+%a %b %d')
-tim=$(date '+%H:%M')
+clock=$(date '+%I')
 
-echo "🗓️ $dat ⏳ $tim "
+case "$clock" in
+	"00") icon="🕛" ;;
+	"01") icon="🕐" ;;
+	"02") icon="🕑" ;;
+	"03") icon="🕒" ;;
+	"04") icon="🕓" ;;
+	"05") icon="🕔" ;;
+	"06") icon="🕕" ;;
+	"07") icon="🕖" ;;
+	"08") icon="🕗" ;;
+	"09") icon="🕘" ;;
+	"10") icon="🕙" ;;
+	"11") icon="🕚" ;;
+	"12") icon="🕛" ;;
+esac
+
+date "+🗓️ %b %d (%a) $icon %I:%M%p"

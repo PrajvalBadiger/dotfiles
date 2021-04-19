@@ -108,12 +108,6 @@ call plug#end()
 "	autocmd BufNewFile,BufRead *.md call SetvimPresentation()
 	nnoremap <F5> :call SetvimPresentation()<CR>
 
-" make
-	function! RunMake()
-		:!clear; make --silent
-	endfunction
-	nnoremap <F9> :call RunMake()<CR>
-
 " tmux navigator
 	let g:tmux_navigator_no_mappings = 1
 

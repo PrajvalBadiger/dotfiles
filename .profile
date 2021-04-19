@@ -6,7 +6,7 @@ export LC_ALL=en_IN.UTF-8
 
 # Default programs:
 export EDITOR="vim"
-export TERMINAL="st"
+export TERMINAL="alacritty"
 export BROWSER="brave"
 
 # ~/ Clean-up:

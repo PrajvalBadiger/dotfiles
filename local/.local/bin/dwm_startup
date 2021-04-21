@@ -18,7 +18,7 @@ dunst &
 unclutter &
 
 # run compositor - transparency
-picom -C -b
+compton -C -b --config ~/.config/compton/compton.conf
 
 # run dwmblocks - dwm status bar
 dwmblocks &

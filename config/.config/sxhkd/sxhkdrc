@@ -1,0 +1,34 @@
+# my sxhkd keybinding configuration
+
+# make sxhkd reload its configuration files:
+mod1 + Escape
+	pkill -USR1 -x sxhkd;  dunstify -a "" "Sxhkd configuration reloaded!!"
+
+# randomly choose a wallpaper from $HOME/pix/wall/
+mod1 + c
+	feh --bg-scale --no-fehbg --randomize "$HOME/pix/wall/"; dunstify -a "" "Feh: wallpaper changed!!"
+
+# open htop
+mod1 + r
+	$TERMINAL -e htop
+
+# open file browser
+mod1 + e
+	$TERMINAL -e nnn
+
+# open BROWSER
+mod1 + w
+	$BROWSER
+
+# open network manager
+mod1 + shift + w
+	networkmanager_dmenu
+	#$TERMINAL -e sudo nmtui
+
+# Take screenshot
+Print
+	scrot -e 'mv $f ~/pix/shots/'	
+
+# power off menu
+mod1 + F4
+	power_off

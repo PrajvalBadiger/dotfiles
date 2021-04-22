@@ -9,7 +9,8 @@ xset r rate 250 30
 key_maps
 
 # restore wallpaper
-feh --no-fehbg --bg-scale '$HOME/pix/wall/0318.jpg' 
+feh --bg-scale --no-fehbg --randomize "$HOME/pix/wall/"
+# feh --no-fehbg --bg-scale '$HOME/pix/wall/0318.jpg' 
 
 # notification service
 dunst &

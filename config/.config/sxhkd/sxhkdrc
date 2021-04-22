@@ -27,11 +27,11 @@ mod1 + shift + w
 
 # run bluetooth dmenu script
 mod1 + shift + b
-	dmenu-bluetooth
+	dmenu-bluetooth; kill -38 $(pidof dwmblocks);
 
 # Take screenshot
 Print
-	scrot -e 'mv $f ~/pix/shots/'	
+	scrot -e 'mv $f ~/pix/shots/'
 
 # power off menu
 mod1 + F4

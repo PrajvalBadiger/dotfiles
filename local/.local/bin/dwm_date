@@ -18,4 +18,4 @@ case "$clock" in
 	"12") icon="🕛" ;;
 esac
 
-date "+🗓️ %b %d (%a) $icon %I:%M%p"
+date "+🗓️ %b %d (%a) $icon %I:%M%p "

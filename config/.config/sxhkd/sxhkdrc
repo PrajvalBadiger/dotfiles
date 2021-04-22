@@ -25,6 +25,10 @@ mod1 + shift + w
 	networkmanager_dmenu
 	#$TERMINAL -e sudo nmtui
 
+# run bluetooth dmenu script
+mod1 + shift + b
+	dmenu-bluetooth
+
 # Take screenshot
 Print
 	scrot -e 'mv $f ~/pix/shots/'	

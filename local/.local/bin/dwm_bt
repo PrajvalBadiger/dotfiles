@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# dependency dmenu-bluetooth
+
+bt_status="$(dmenu-bluetooth --status | awk '{print $2}')"
+
+if [ "$bt_status" == "Off" ] ; then
+	echo " BT Off"
+elif [ "$bt_status" == "On" ] ; then
+	echo " BT On"
+else
+	echo " BT $bt_status"
+fi

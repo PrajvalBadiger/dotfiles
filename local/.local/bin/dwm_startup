@@ -2,11 +2,17 @@
 
 # startup script for dwm 
 
+# run dwmblocks - dwm status bar
+dwmblocks &
+
 # increase key repeat speed
 xset r rate 250 30
 
 # restore keymaps
 key_maps
+
+# sxhkd
+sxhkd -c $HOME/.config/sxhkd/sxhkdrc &
 
 # restore wallpaper
 feh --bg-scale --no-fehbg --randomize "$HOME/pix/wall/"
@@ -20,9 +26,6 @@ unclutter &
 
 # run compositor - transparency
 compton -C -b --config ~/.config/compton/compton.conf
-
-# run dwmblocks - dwm status bar
-dwmblocks &
 
 # dwm restart loop
 while :; do

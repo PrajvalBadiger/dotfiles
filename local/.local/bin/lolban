@@ -1,0 +1,10 @@
+#!/bin/sh 
+
+# script to print a colorfull banner
+#+ please install
+#+ 1. figlet and figlet fonts
+#+ 2. lolcat
+
+[[ "$1" != "" ]] && figlet -f 3d.flf $1 | lolcat || echo -e "\n :: Usage lolban \"text\"\n"; exit 1
+
+exit 0

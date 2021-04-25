@@ -1,0 +1,9 @@
+#!/bin/sh 
+
+# script to toggle compton compositor
+
+pgrep -x compton > /dev/null &&  # check if compton is running
+	pkill compton || # if running kill it
+	compton -b --config ~/.config/compton/compton.conf # else start compton
+
+exit 0

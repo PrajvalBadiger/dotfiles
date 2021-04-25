@@ -17,5 +17,5 @@ alias csrc='cd $HOME/.local/src/'
 alias clb='cd $HOME/.local/bin/'
 
 # dwm
-alias fullclean='git checkout master && make clean && rm -f config.h && git reset --hard origin/master'
+alias fullclean='make clean && rm -f config.h && git reset --hard origin/main'
 alias mkins='make && sudo make clean install'

@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# suckbranch - create multiple branches 
+
+# create branches for either dwm or dmenu
+if [ "$1" == "dwm" ] ; then
+	branches="center config fullscreen pertag hidevacant noborder single_border swallow"
+elif [ "$1" == "dmenu" ] ; then
+	branches="center config border"
+fi
+
+echo -e "\nsuckbranch\n"
+git checkout main
+
+for branch in $branches; do
+	git branch $branch
+done
+
+git branch

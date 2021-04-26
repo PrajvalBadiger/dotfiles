@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'unblevable/quick-scope' " quick scope
 	Plug 'raimondi/delimitmate' " auto closing brackets/quotes/...
 	Plug 'vim-syntastic/syntastic' " syntax checkings
+	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
 
 " start from where you left before

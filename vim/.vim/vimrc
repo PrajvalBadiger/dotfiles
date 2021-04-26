@@ -142,11 +142,15 @@ call plug#end()
 		autocmd ColorScheme * highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
 	augroup END
 
+" include dir for header files
 let g:syntastic_c_include_dirs = ['../hdr/', './hdr/']
 
 " transparent background
-hi Normal guibg=NONE ctermbg=NONE
+	hi Normal guibg=NONE ctermbg=NONE
 
 " hex code colors 
-set termguicolors
-let g:Hexokinase_highlighters = ['backgroundfull']
+	set termguicolors
+	let g:Hexokinase_highlighters = ['backgroundfull']
+
+" highlight current line 
+	set cursorline

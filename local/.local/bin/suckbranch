@@ -17,3 +17,7 @@ for branch in $branches; do
 done
 
 git branch
+
+echo
+echo "Done!"
+echo

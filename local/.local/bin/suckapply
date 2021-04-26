@@ -10,7 +10,14 @@ for branch in $(git for-each-ref --format='%(refname)' refs/heads/ | cut -d'/' -
 	if [ "$branch" != "main" ]; then
 		echo "$branch"
 		git checkout $branch
-		patch -p1 < ../my_$1_patches/$branch.diff &&
-		git commit -a -m "$branch"
+		if patch -p1 < ../my_$1_patches/$branch.diff; then
+			git commit -a -m "$branch"
+		else
+			exit 1
+		fi
 	fi
 done
+
+echo
+echo Done patching!
+echo

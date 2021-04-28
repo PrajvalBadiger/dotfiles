@@ -4,13 +4,13 @@ call plug#begin('~/.vim/plugged')
 	Plug 'morhetz/gruvbox' 	" gruvbox colorscheme
 	Plug 'vim-scripts/AutoComplPop' 	" auto completion
 	Plug 'christoomey/vim-tmux-navigator' 	" vim tmux navigator
-	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " fzf fuzzy file finder
-	Plug 'junegunn/fzf.vim'
 	Plug 'justinmk/vim-sneak' 	" vim sneak
 	Plug 'unblevable/quick-scope' " quick scope
 	Plug 'raimondi/delimitmate' " auto closing brackets/quotes/...
 	Plug 'vim-syntastic/syntastic' " syntax checkings
 	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+	Plug 'tpope/vim-commentary'
+	Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 " start from where you left before
@@ -52,7 +52,7 @@ call plug#end()
 	set background=dark
 	colorscheme gruvbox
 
-" set tabstop to 4 and shiftwidth to 4 
+" set tabstop to 4 and shiftwidth to 4
 	set tabstop=4 shiftwidth=4
 
 " indentation
@@ -118,25 +118,28 @@ call plug#end()
 	nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
 	nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 
-" disable arrow keys
+" arrow keys to resize panes in normal mode
+	nnoremap <left> <Esc><C-w><<Insert>
+	nnoremap <right> <Esc><C-w>><Insert>
+	nnoremap <up> <Esc><C-w>+<Insert>
+	nnoremap <down> <Esc><C-w>-<Insert>
+
+" you better use the vim keys
 	inoremap <left> <nop>
 	inoremap <right> <nop>
 	inoremap <up> <nop>
 	inoremap <down> <nop>
 
-	nnoremap <left> <nop>
-	nnoremap <right> <nop>
-	nnoremap <up> <nop>
-	nnoremap <down> <nop>
-
 " move by line on screen
 	nnoremap j gj
 	nnoremap k gk
 
-" fzf config
-	nnoremap <silent> <C-f> :Files<CR>
+" move faster
+	nnoremap <S-k> 5k
+	nnoremap <S-j> 5j
 
-" quickscope 
+
+" quickscope
 	augroup qs_colors
 		autocmd!
 		autocmd ColorScheme * highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
@@ -149,9 +152,9 @@ let g:syntastic_c_include_dirs = ['../hdr/', './hdr/']
 " transparent background
 	hi Normal guibg=NONE ctermbg=NONE
 
-" hex code colors 
+" hex code colors
 	set termguicolors
 	let g:Hexokinase_highlighters = ['backgroundfull']
 
-" highlight current line 
+" highlight current line
 	set cursorline

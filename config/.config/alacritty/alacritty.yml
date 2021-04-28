@@ -101,12 +101,16 @@ font:
  #  style: Bold
 
   normal:
-    family: comic mono
-    style: Regular
+     family: TerminessTTF Nerd Font
+     style: Bold
+ #   family: comic mono
+ #   style: Regular
 
   bold:
-    family: comic mono
+    family: TerminessTTF Nerd Font
     style: Bold
+      # family: comic mono
+      #style: Bold
 
   italic:
     family: comic mono
@@ -116,7 +120,7 @@ font:
     family: comic mono
     style: Bold Italic
 
-  size: 10
+  size: 12
 
 # background opacity
 background_opacity: 0.9

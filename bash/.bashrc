@@ -4,7 +4,7 @@
 
 # vim mode
 set -o vi
-
+export PATH=~/.local/bin/:$PATH
 # PROMPT_DIRTRIM=2 # shorten to path name to two dirs
 
 [[ $- != *i* ]] && return

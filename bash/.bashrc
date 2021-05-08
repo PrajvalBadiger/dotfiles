@@ -78,7 +78,7 @@ if ${use_color} ; then
 	if [[ ${EUID} == 0 ]] ; then
 		PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
 	else
-		PS1="$(tput setaf 9)\W $(tput setaf 14)% $(tput setaf 7)"
+		PS1="$(tput setaf 9)\W"
 		# PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
 
 	fi	
@@ -153,3 +153,8 @@ ex ()
 # if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
 #     tmux -u attach -t default || tmux -u new -s default
 # fi
+
+# git prompt
+. ~/.config/git/git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=1
+export PS1+='$(tput setaf 2)$(__git_ps1 " (%s)") $(tput setaf 14)% $(tput setaf 7)'

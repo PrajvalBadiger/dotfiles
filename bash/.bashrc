@@ -131,6 +131,7 @@ ex ()
 {
   if [ -f $1 ] ; then
     case $1 in
+      *.tar.xz)    tar xf $1 ;;
       *.tar.bz2)   tar xjf $1   ;;
       *.tar.gz)    tar xzf $1   ;;
       *.bz2)       bunzip2 $1   ;;

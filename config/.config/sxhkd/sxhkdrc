@@ -1,40 +1,40 @@
 # my sxhkd keybinding configuration
 
 # make sxhkd reload its configuration files:
-mod1 + Escape
+mod4 + Escape
 	pkill -USR1 -x sxhkd;  dunstify -a "" "Sxhkd configuration reloaded!!"
 
 # terminal emulator
-mod1 + Return
+mod4 + Return
 	$TERMINAL
 
 # program launcher
-mod1 + d
+mod4 + d
 	dmenu_run
 
 # randomly choose a wallpaper from $HOME/pix/wall/
-mod1 + c
+mod4 + c
 	feh --bg-scale --no-fehbg --randomize "$HOME/pix/wall/"; dunstify -a "" "Feh: wallpaper changed!!"
 
 # open htop
-mod1 + r
+mod4 + r
 	$TERMINAL -e htop
 
 # open file browser
-mod1 + e
+mod4 + e
 	$TERMINAL -e nnn
 
 # open BROWSER
-mod1 + w
+mod4 + w
 	$BROWSER
 
 # open network manager
-mod1 + shift + w
+mod4 + shift + w
 	networkmanager_dmenu
 	#$TERMINAL -e sudo nmtui
 
 # run bluetooth dmenu script
-mod1 + shift + b
+mod4 + shift + b
 	dmenu-bluetooth; kill -38 $(pidof dwmblocks);
 
 # Take screenshot
@@ -42,12 +42,12 @@ Print
 	scrot -e 'mv $f ~/pix/shots/'
 
 # power off menu
-mod1 + F4
+mod4 + F4
 	power_off
 
 # toggle compositor
-mod1 + n
-	toggle_compton
+#mod4 + n
+#toggle_compton
 
 
 

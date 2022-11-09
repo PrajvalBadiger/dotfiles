@@ -18,6 +18,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 	Plug 'tpope/vim-commentary'
 	Plug 'ctrlpvim/ctrlp.vim'
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 " start from where you left before
@@ -165,3 +167,6 @@ let g:syntastic_c_include_dirs = ['../hdr/', './hdr/']
 
 " highlight current line
 	set cursorline
+
+" Airline settings
+let g:airline#extentions#tabline#enabled = 1

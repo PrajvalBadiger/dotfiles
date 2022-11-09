@@ -14,7 +14,7 @@ Before Installation backup your dotfiles. Clone the repo in your home dir and cr
 ```bash
 git clone https://github.com/PrajvalBadiger/dotfiles ~/.dotfiles/
 cd ~/.dotfiles/ 
-stow bash config tmux vim
+stow bash config tmux vim xinit
 ```
 You can also install scripts by cearting sym link with stow.
 

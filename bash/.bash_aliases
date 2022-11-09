@@ -6,7 +6,7 @@ alias gd='git diff'
 alias gl='git log --all --graph --decorate'
 
 alias ..='cd ..'
-alias ls='lsd'
+#alias ls='lsd'
 alias cl='clear'
 alias v='vim'
 alias vi='vim'

@@ -7,7 +7,7 @@ export LC_ALL=en_IN.UTF-8
 # Default programs:
 export EDITOR="vim"
 export TERMINAL="alacritty"
-export BROWSER="brave"
+export BROWSER="firefox"
 
 # ~/ Clean-up:
 export XDG_CONFIG_HOME="$HOME/.config"

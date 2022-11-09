@@ -2,11 +2,12 @@
 
 # suckreset - reset all braches back to origin/main
 
+MAIN="main"
 
 echo -e "\nsuckreset\n"
 
 for branch in $(git for-each-ref --format='%(refname)' refs/heads/ | cut -d'/' -f3); do
 	echo "$branch"
 	git checkout $branch
-	git reset --hard origin/main
+	git reset --hard origin/$MAIN
 done

@@ -2,15 +2,16 @@
 
 # suckbranch - create multiple branches 
 
+MAIN="main"
 # create branches for either dwm or dmenu
 if [ "$1" == "dwm" ] ; then
-	branches="center config fullscreen pertag hidevacant noborder single_border swallow"
+	branches="attachbottom center config cursorwrap fullscreen pertag hidevacant noborder single_border swallow"
 elif [ "$1" == "dmenu" ] ; then
 	branches="center config border"
 fi
 
 echo -e "\nsuckbranch\n"
-git checkout main
+git checkout $MAIN
 
 for branch in $branches; do
 	git branch $branch

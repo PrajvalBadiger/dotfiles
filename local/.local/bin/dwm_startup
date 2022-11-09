@@ -7,16 +7,17 @@ dwmblocks &
 
 # increase key repeat speed
 xset r rate 250 30
+xrandr --output Virtual1 --mode 1920x1080
 
 # restore keymaps
-key_maps
+#key_maps
 
 # sxhkd
 sxhkd -c $HOME/.config/sxhkd/sxhkdrc &
 
 # restore wallpaper
-feh --bg-scale --no-fehbg --randomize "$HOME/pix/wall/"
-# feh --no-fehbg --bg-scale '$HOME/pix/wall/0318.jpg' 
+#feh --bg-scale --no-fehbg --randomize "$HOME/pix/wall/"
+feh --no-fehbg --bg-fill '$HOME/.config/wall.jpg'
 
 # notification service
 dunst &
@@ -25,7 +26,7 @@ dunst &
 unclutter &
 
 # run compositor - transparency
-compton -C -b --config ~/.config/compton/compton.conf
+picom -C -b --config ~/.config/picom/picom.conf
 
 # dwm restart loop
 while :; do

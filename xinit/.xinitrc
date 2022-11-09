@@ -1,0 +1,32 @@
+# run dwmblocks - dwm status bar
+dwmblocks &
+
+# increase key repeat speed
+#xset r rate 250 30
+xrandr --output Virtual1 --mode 1920x1080
+
+# restore keymaps
+#key_maps
+
+# sxhkd
+sxhkd -c $HOME/.config/sxhkd/sxhkdrc &
+
+# restore wallpaper
+feh --no-fehbg --bg-fill "$HOME/.config/wall.jpg" 
+
+# notification service
+dunst &
+
+# unclutter - dont display mouse when not in use
+unclutter &
+
+# run compositor - transparency
+#picom -C -b --config ~/.config/picom/picom.conf
+
+# dwm restart loop
+while :; do
+    # log stderror to a file 
+	# dwm 2> ~/.dwm.log
+    # no error logging
+    dwm >/dev/null 2>&1
+done

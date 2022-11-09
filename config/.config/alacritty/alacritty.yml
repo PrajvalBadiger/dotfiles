@@ -30,6 +30,8 @@ window:
     x: 10
     y: 10
 
+    opacity: 1.0
+
 
 colors:
   # Colors (Gruvbox Material Dark Medium)
@@ -96,34 +98,27 @@ colors:
   indexed_colors: []
 
 font:
- #normal:
- #  family: TerminessTTF Nerd Font
- #  style: Bold
-
+  #normal:
+  #  family: comic mono
+  #  style: Regular
   normal:
-     family: TerminessTTF Nerd Font
-     style: Bold
- #   family: comic mono
- #   style: Regular
+    family: Noto Sans Mono Black
+    style: Regular
 
   bold:
-    family: TerminessTTF Nerd Font
+    family: Noto Sans Mono Black
     style: Bold
-      # family: comic mono
-      #style: Bold
 
   italic:
-    family: comic mono
+    family: Noto Sans Mono Black
     style: Italic
 
   bold_italic:
-    family: comic mono
+    family: Noto Sans Mono Black
     style: Bold Italic
 
-  size: 12
+  size: 14
 
-# background opacity
-background_opacity: 0.9
 
 # Key bindings
 Key_bindings:

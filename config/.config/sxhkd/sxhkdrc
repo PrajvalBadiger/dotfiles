@@ -42,14 +42,12 @@ Print
 	scrot -e 'mv $f ~/pix/shots/'
 
 # power off menu
-mod4 + F4
+mod1 + F4
 	power_off
 
 # toggle compositor
 #mod4 + n
 #toggle_compton
-
-
 
 # Toggle mute
 XF86AudioMute

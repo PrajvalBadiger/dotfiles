@@ -12,9 +12,9 @@ mod4 + Return
 mod4 + d
 	dmenu_run
 
-# randomly choose a wallpaper from $HOME/pix/wall/
-mod4 + c
-	feh --bg-scale --no-fehbg --randomize "$HOME/pix/wall/"; dunstify -a "" "Feh: wallpaper changed!!"
+# Show clipmenu
+mod4 + v
+    CM_LAUNCHER=dmenu clipmenu
 
 # open htop
 mod4 + r

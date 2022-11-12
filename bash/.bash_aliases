@@ -1,6 +1,7 @@
 # git aliases
 alias gb='git branch'
 alias gco='git checkout'
+alias vo='ls | fzf --height=~40% --border | xargs -or vim'
 alias gs='git status'
 alias gd='git diff'
 alias gl='git log --all --graph --decorate'

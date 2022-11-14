@@ -38,11 +38,11 @@ mod4 + shift + b
 	dmenu-bluetooth; kill -38 $(pidof dwmblocks);
 
 # Take screenshot
-Print
+mod4 + s
 	scrot -e 'mv $f ~/pix/shots/'
 
 # power off menu
-mod1 + F4
+mod4 + p
 	power_off
 
 # toggle compositor

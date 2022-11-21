@@ -1,62 +1,71 @@
 # my sxhkd keybinding configuration
 
 # make sxhkd reload its configuration files:
-mod4 + Escape
-	pkill -USR1 -x sxhkd;  dunstify -a "" "Sxhkd configuration reloaded!!"
+super + Escape
+	pkill -USR1 -x sxhkd;  dunstify -a " " "Sxhkd configuration reloaded!!"
 
 # terminal emulator
-mod4 + Return
+super + Return
 	$TERMINAL
 
 # program launcher
-mod4 + d
+super + d
 	dmenu_run
 
 # Show clipmenu
-mod4 + v
+super + v
     CM_LAUNCHER=dmenu clipmenu
 
 # open htop
-mod4 + r
+super + r
 	$TERMINAL -e htop
 
 # open file browser
-mod4 + e
+super + e
 	$TERMINAL -e nnn
 
 # open BROWSER
-mod4 + w
+super + w
 	$BROWSER
 
 # open network manager
-mod4 + shift + w
+super + shift + w
 	networkmanager_dmenu
 	#$TERMINAL -e sudo nmtui
 
 # run bluetooth dmenu script
-mod4 + shift + b
-	dmenu-bluetooth; kill -38 $(pidof dwmblocks);
+super + shift + b
+	dmenu-bluetooth; kill -RTMIN+4 dwmblocks;
 
 # Take screenshot
-mod4 + s
+super + s
 	scrot -e 'mv $f ~/pix/shots/'
 
 # power off menu
-mod4 + p
+super + p
 	power_off
 
+# volume control
+super + u
+	volumeControl up; pkill -RTMIN+20 dwmblocks;
+
+super + shift + u
+	volumeControl down; pkill -RTMIN+20 dwmblocks;
+
+super + shift + m
+	volumeControl mute; pkill -RTMIN+20 dwmblocks;
 # toggle compositor
-#mod4 + n
+#super + n
 #toggle_compton
 
 # Toggle mute
 XF86AudioMute
-    volumeControl mute; kill -54 $(pidof dwmblocks)
+    volumeControl mute; kill -RTMIN+20 dwmblocks;
 	
 # Change volume
 XF86Audio{Raise,Lower}Volume
-    volumeControl {up,down}; kill -54 $(pidof dwmblocks)
+    volumeControl {up,down}; kill -RTMIN+20 dwmblocks;
 
 # Change Brightness
 XF86MonBrightness{Up,Down}
-	brightnessControl {up,down}; kill -64 $(pidof dwmblocks)
+	brightnessControl {up,down}; kill -RTMIN+30 dwmblocks;

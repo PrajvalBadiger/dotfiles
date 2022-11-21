@@ -1,0 +1,5 @@
+#!/bin/sh
+
+
+wal -i $1 -o apply_colors.sh && xrdb -merge -I$HOME ~/.Xresources && killall dwm
+exit 0

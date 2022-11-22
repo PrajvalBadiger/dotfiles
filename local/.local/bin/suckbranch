@@ -7,7 +7,7 @@ MAIN="main"
 if [ "$1" == "dwm" ] ; then
 	branches="attachbottom barheight center config cursorwrap fullscreen pertag hidevacant noborder single_border swallow"
 elif [ "$1" == "dmenu" ] ; then
-	branches="center config border"
+	branches="center config border xresources"
 fi
 
 echo -e "\nsuckbranch\n"

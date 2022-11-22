@@ -1,5 +1,17 @@
 #!/bin/sh
 
 
-wal -i $1 -o apply_colors.sh && xrdb -merge -I$HOME ~/.Xresources && killall dwm
+wal -i $1 -o alacritty_pywal.sh
+
+xrdb -merge -I$HOME ~/.Xresources
+
+# Symlink dunst config
+ln -sf ~/.cache/wal/dunstrc ~/.config/dunst/dunstrc
+
+# Restart dunst with the new color scheme
+pkill dunst
+dunst &
+
+pidof dwm >/dev/null && xdotool key super+shift+r
+
 exit 0

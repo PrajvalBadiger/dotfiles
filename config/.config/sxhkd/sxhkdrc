@@ -55,8 +55,8 @@ super + shift + u
 super + shift + m
 	volumeControl mute; pkill -RTMIN+20 dwmblocks;
 # toggle compositor
-#super + n
-#toggle_compton
+super + n
+	toggle_picom
 
 # Toggle mute
 XF86AudioMute

@@ -1,17 +1,19 @@
 #!/bin/sh
 
 
+dunstconf="${XDG_CONFIG_HOME:-$HOME/.config}/dunst/dunstrc"
+zathuraconf="${XDG_CONFIG_HOME:-$HOME/.config}/zathura/zathurarc"
+
 wal -i $1 -o alacritty_pywal.sh
 
 xrdb -merge -I$HOME ~/.Xresources
 
-# Symlink dunst config
-ln -sf ~/.cache/wal/dunstrc ~/.config/dunst/dunstrc
+# Symlink dunst and zathura config
+ln -sf "${XDG_CACHE_HOME:-$HOME/.cache}/wal/dunstrc" "$dunstconf"
+ln -sf "${XDG_CACHE_HOME:-$HOME/.cache}/wal/zathurarc" "$zathuraconf"
+
 
 # Restart dunst with the new color scheme
-pkill dunst
-dunst &
+pkill dunst; setsid -f dunst
 
 pidof dwm >/dev/null && xdotool key super+shift+r
-
-exit 0

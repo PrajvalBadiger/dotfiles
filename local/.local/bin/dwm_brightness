@@ -4,4 +4,4 @@
 
 brightness=$(xbacklight -get | sed 's|\.[0-9]*||')
 
-echo "🔆$brightness%"
+echo " $brightness%"

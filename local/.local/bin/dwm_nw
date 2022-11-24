@@ -2,10 +2,16 @@
 
 # get network connection info
 #+ and network speed
+
+ip_address() {
+	echo -e $(ip -j route get 8.8.8.8 | jq -r ".[0].prefsrc")
+}
+
 dwm_nm () {
     CONNAME=$(nmcli -a | grep 'Wired connection' | awk 'NR==1{print $1}')
+	[ "$CONNAME" = "" ] && icon="" || icon=" "
 	[ "$CONNAME" = "" ] && CONNAME=$(nmcli -t -f active,ssid dev wifi | grep '^yes' | sed 's|.*:||')
-	[ "$CONNAME" = "" ] && echo " ❎ |" || echo " 📶 $CONNAME"
+	[ "$CONNAME" = "" ] && echo "" || echo "$icon$CONNAME"
 }
 
 update() {
@@ -23,4 +29,4 @@ update() {
 rx=$(update /sys/class/net/[ew]*/statistics/rx_bytes)
 tx=$(update /sys/class/net/[ew]*/statistics/tx_bytes)
 
-printf "$(dwm_nm)🔻%sB🔺%sB\\n" $(numfmt --to=iec $rx) $(numfmt --to=iec $tx)
+printf " $(ip_address) $(dwm_nm)🔻%sB🔺%sB\\n" $(numfmt --to=iec $rx) $(numfmt --to=iec $tx)

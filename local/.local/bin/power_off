@@ -6,13 +6,13 @@ choice=$(echo -e "shutdown\nrestart\ncancel" | dmenu -p poweroff:)
 
 if [ "$choice" == "shutdown" ]; then
 
-	choice=$(echo -e "No\nYes" | dmenu -p "Do you want to Shutdown ? ")
-	[ "$choice" == "Yes" ] && $TERMINAL -e sudo shutdown -P now
+	choice=$(echo -e "no\nyes" | dmenu -p "Do you want to Shutdown ? ")
+	[ "$choice" == "yes" ] && $TERMINAL -e sudo shutdown -P now
 
 elif [ "$choice" == "restart" ]; then
 
-	choice=$(echo -e "No\nYes" | dmenu -p "Do you want to Restart ? ")
-	[ "$choice" == "Yes" ] && $TERMINAL -e sudo reboot
+	choice=$(echo -e "no\nyes" | dmenu -p "Do you want to Restart ? ")
+	[ "$choice" == "yes" ] && $TERMINAL -e sudo reboot
 
 elif [ "$choice" == "cancel" ]; then
 	exit 0

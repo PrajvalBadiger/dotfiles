@@ -99,22 +99,22 @@ window:
       #
 font:
   normal:
-    family: Terminus
-    style: Bold
+    family: Hermit
+    style: Regular
 
   bold:
-    family: Terminus
+    family: Hermit
     style: Bold
 
   italic:
-    family: Terminus
+    family: Hermit
     style: Italic
 
   bold_italic:
-    family: Terminus
+    family: Hermit
     style: Bold Italic
 
-  size: 16
+  size: 14
 
 
 # Key bindings
@@ -133,27 +133,27 @@ Key_bindings:
 # BEGIN ACE
 colors:
   primary:
-    background: '#070C08'
-    foreground: '#d7d2ce'
+    background: '#090637'
+    foreground: '#a4bee8'
   cursor:
-    text:       '#070C08'
-    cursor:     '#d7d2ce'
+    text:       '#090637'
+    cursor:     '#a4bee8'
   normal:
-    black:      '#070C08'
-    red:        '#548D76'
-    green:      '#CA8E72'
-    yellow:     '#266B8F'
-    blue:       '#BE6A8A'
-    magenta:    '#52ADAA'
-    cyan:       '#E4A79D'
-    white:      '#d7d2ce'
+    black:      '#090637'
+    red:        '#4B62A8'
+    green:      '#113DC3'
+    yellow:     '#2B61D6'
+    blue:       '#4E6FD6'
+    magenta:    '#308FF5'
+    cyan:       '#6B92C1'
+    white:      '#a4bee8'
   bright:
-    black:      '#969390'
-    red:        '#548D76'
-    green:      '#CA8E72'
-    yellow:     '#266B8F'
-    blue:       '#BE6A8A'
-    magenta:    '#52ADAA'
-    cyan:       '#E4A79D'
-    white:      '#d7d2ce'
+    black:      '#7285a2'
+    red:        '#4B62A8'
+    green:      '#113DC3'
+    yellow:     '#2B61D6'
+    blue:       '#4E6FD6'
+    magenta:    '#308FF5'
+    cyan:       '#6B92C1'
+    white:      '#a4bee8'
 # END ACE

@@ -1,0 +1,12 @@
+#!/bin/sh
+#output='~/pix/shots/%Y-%m-%d-%T-screenshot.png'
+home_dir="$HOME"
+case "$1" in
+	"select") 
+		scrot --select --line mode=edge -e 'mv $f ~/pix/shots/' || exit ;;
+	"window")
+		scrot "$output" --focused --border -e 'mv $f ~/pix/shots/' || exit ;;
+	*) scrot -e 'mv $f ~/pix/shots/' || exit ;;
+esac
+
+notify-send "Screenshot taken."

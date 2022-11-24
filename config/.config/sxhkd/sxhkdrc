@@ -39,7 +39,10 @@ super + shift + b
 
 # Take screenshot
 super + s
-	scrot -e 'mv $f ~/pix/shots/'
+	screenshot
+
+super + shift + s
+	screenshot select
 
 # power off menu
 super + p

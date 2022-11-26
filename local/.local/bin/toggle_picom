@@ -1,9 +1,18 @@
 #!/bin/sh 
 
+status=$(pgrep -x picom)
 # script to toggle compton compositor
+#[ "$status" = "" ] &&  dunstify -u low -r "8118" "picom started" || dunstify -u low -r "8118" "picom killed"   
+#
+#pgrep -x picom > /dev/null &&  # check if compton is running
+#	pkill picom || # if running kill it
+#	picom -b --config ~/.config/picom/picom.conf
+#
 
-pgrep -x picom > /dev/null &&  # check if compton is running
-	pkill picom || # if running kill it
-	picom -b --config ~/.config/picom/picom.conf # else start compton
-
-exit 0
+if [ "$status" == "" ]; then
+	picom -b --config ~/.config/picom/picom.conf
+	dunstify -u low -r "8118" "picom started" 
+elif [ "$status" -gt "0" ]; then
+ 	dunstify -u low -r "8118" "picom killed"   
+	pkill picom 
+fi

@@ -4,3 +4,4 @@ plugged/
 plugged/*
 view/*
 view
+vim/.vim/autoload/

@@ -10,7 +10,7 @@ status=$(pgrep -x picom)
 #
 
 if [ "$status" == "" ]; then
-	picom -b --config ~/.config/picom/picom.conf
+	picom &
 	dunstify -u low -r "8118" "picom started" 
 elif [ "$status" -gt "0" ]; then
  	dunstify -u low -r "8118" "picom killed"   

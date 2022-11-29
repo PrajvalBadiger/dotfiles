@@ -6,7 +6,7 @@ zathuraconf="${XDG_CONFIG_HOME:-$HOME/.config}/zathura/zathurarc"
 
 wal -i $1 -o alacritty_pywal.sh
 
-xrdb -merge -I$HOME ~/.Xresources
+xrdb -merge -I$XDG_CACHE_HOME $XDG_CONFIG_HOME/x11/xresources
 
 # Symlink dunst and zathura config
 ln -sf "${XDG_CACHE_HOME:-$HOME/.cache}/wal/dunstrc" "$dunstconf"

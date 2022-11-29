@@ -2,7 +2,7 @@
 
 This repo contains all my configurations and scripts. <br>
 [`bash`](/bash) - .bashrc (default .bashrc with some tweaks) and .bash_aliases. <br>
-[`config`](/config) - alacritty, compton, dunst, sxhkd and zathura config files. <br>
+[`config`](/config) - alacritty, picom, dunst, sxhkd, pywal, sxiv and zathura config files. <br>
 [`local`](/local) - contains all my bash scripts. <br>
 [`tmux`](/tmux) - tmux config. <br>
 [`vim`](/vim) - all my vim config. <br>

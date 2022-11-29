@@ -1,8 +1,6 @@
-!! Transparency (0-1):
-*.alpha: 1
-
 !! Set a default font and font size as below:
-*.font: Terminus:size=14:style=Bold
+/* *.font: Terminus:size=14:style=Bold */
+*.font: Hermit:size=12:style=Regular
 *.dmenufont: Terminus:size=14:style=Bold
 dwm.realgap: 10
 dwm.gappx: 10
@@ -22,7 +20,8 @@ dwm.gappx: 10
 /* cyan		6	14 */
 /* white	7	15 */
 
-#include "/home/prajval/.cache/wal/colors.Xresources"
+
+#include "wal/colors.Xresources"
 /* !! gruvbox: */
 /* *.color0: #1d2021 */
 /* *.color1: #504945 */

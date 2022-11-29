@@ -1,0 +1,18 @@
+#!/bin/sh
+
+#xset r rate 250 30 # increase key repeat speed
+xrandr --output Virtual1 --mode 1920x1080 & # set res
+wal -R # restore wallpaper
+
+# sync CLIPBOARD and PRIMARY selection
+autocutsel -fork -selection CLIPBOARD &
+autocutsel -fork -selection PRIMARY &
+
+xrdb -I${XDG_CACHE_HOME:-$HOME/.cache} $XDG_CONFIG_HOME/x11/xresources # load Xresources
+
+# Auto start apps
+autostart="dwmblocks dunst unclutter sxhkd clipmenud picom"
+
+for program in $autostart; do
+	pidof -s "$program" || "$program" &
+done >/dev/null 2>&1

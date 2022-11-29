@@ -159,3 +159,5 @@ ex ()
 . ~/.config/git/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 export PS1+='$(tput setaf 2)$(__git_ps1 " (%s)") $(tput setaf 14)% $(tput setaf 7)'
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -5,8 +5,10 @@ export TERM="xterm-256color"
 
 # source aliases
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zsh_aliases" ] && source "$XDG_CONFIG_HOME/zsh/zsh_aliases"
-#export CM_LAUNCHER=fzf
-[ -f ${XDG_CONFIG_HOME:-$HOME/.config}/zsh/fzf.zsh ] && source $XDG_CONFIG_HOME/zsh/fzf.zsh
+
+# fzf
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh
+export FZF_DEFAULT_OPTS="--reverse --height=~20% --border=sharp"
 
 # load colors
 autoload -U colors && colors

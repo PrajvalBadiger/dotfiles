@@ -9,7 +9,7 @@ export TERM="xterm-256color"
 # fzf
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh
 export FZF_DEFAULT_OPTS="--reverse --height=~20% --border=sharp"
-
+export FZF_DEFAULT_COMMAND='find . \! \( -type d -path ./.git -prune \) \! -type d \! -name '\''*.tags'\'' -printf '\''%P\n'\'
 # load colors
 autoload -U colors && colors
 . /home/prajval/.cache/wal/colors.sh

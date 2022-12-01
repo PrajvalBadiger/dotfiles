@@ -15,7 +15,9 @@ call plug#begin('~/.vim/plugged')
 	Plug 'raimondi/delimitmate' " auto closing brackets/quotes/...
 	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 	Plug 'tpope/vim-commentary'
-	Plug 'ctrlpvim/ctrlp.vim'
+	"Plug 'ctrlpvim/ctrlp.vim'
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	Plug 'junegunn/fzf.vim'
 	Plug 'preservim/nerdtree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -176,7 +178,7 @@ nnoremap <leader>e :NERDTreeToggle<CR>
 " show hidden files by default
 let NERDTreeShowHidden=1
 " Open nerdtree window on opening Vim if no file is specified
-autocmd VimEnter * if argc() == 0 | NERDTree | endif
+autocmd VimEnter * if argc() == 0 | NERDTree | wincmd p | endif
 
 " Refresh the current folder if any changes
 autocmd BufEnter NERD_tree_* | execute 'normal R'
@@ -247,3 +249,11 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
+
+" fzf
+let $FZF_DEFAULT_COMMAND='find . \! \( -type d -path ./.git -prune \) \! -type d \! -name ''*.tags'' -printf ''%P\n'''
+nnoremap <C-p> :Files<Cr>
+nnoremap <C-b> :Buffers<Cr>
+nnoremap <C-g> :GFiles<Cr>
+nnoremap <leader>c :Commits<Cr>
+

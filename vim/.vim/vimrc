@@ -7,6 +7,8 @@ endif
 
 " Plugins
 call plug#begin('~/.vim/plugged')
+	Plug 'mhinz/vim-signify'
+	Plug 'tpope/vim-fugitive'
 	Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 	Plug 'morhetz/gruvbox' 	" gruvbox colorscheme
 	Plug 'christoomey/vim-tmux-navigator' 	" vim tmux navigator
@@ -15,15 +17,12 @@ call plug#begin('~/.vim/plugged')
 	Plug 'raimondi/delimitmate' " auto closing brackets/quotes/...
 	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 	Plug 'tpope/vim-commentary'
-	"Plug 'ctrlpvim/ctrlp.vim'
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim'
-	Plug 'preservim/nerdtree' |
-            \ Plug 'Xuyuanp/nerdtree-git-plugin'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-"Leader Key
+" Leader Key
 let mapleader="\<Space>"
 
 " start from where you left before
@@ -151,6 +150,9 @@ let mapleader="\<Space>"
 	nnoremap <S-k> 5k
 	nnoremap <S-j> 5j
 
+" center cursor while moving with ctrl + d and ctrl + u
+	nnoremap <C-d> <C-d>zz
+	nnoremap <C-u> <C-u>zz
 
 " quickscope
 	augroup qs_colors
@@ -168,30 +170,6 @@ let mapleader="\<Space>"
 
 " highlight current line
 	set cursorline
-
-" nerd git config
-let g:NERDTreeGitStatusShowClean = 1 " default: 0
-let g:NERDTreeGitStatusConcealBrackets = 1 " default: 0
-
-" NERDTree
-nnoremap <leader>e :NERDTreeToggle<CR>
-" show hidden files by default
-let NERDTreeShowHidden=1
-" Open nerdtree window on opening Vim if no file is specified
-autocmd VimEnter * if argc() == 0 | NERDTree | wincmd p | endif
-
-" Refresh the current folder if any changes
-autocmd BufEnter NERD_tree_* | execute 'normal R'
-au CursorHold * if exists("t:NerdTreeBufName") | call <SNR>15_refreshRoot() | endif
-
-"Reload the window if directory is changed
-augroup DIRCHANGE
-    au!
-    autocmd DirChanged global :NERDTreeCWD
-augroup END
-
-"Close nerdtree automatically if it is theonly window open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 vnoremap < <gv
 vnoremap > >gv
@@ -212,8 +190,12 @@ tmap <silent> <C-h> <C-w>h
 " hit esc for Normal mode in terminal
 tmap <Esc> <C-\><C-n>
 
+" remove | from vertsplit incicator
+set fillchars+=vert:\ 
 
 " Coc
+let g:coc_global_extensions = ['coc-json', 'coc-rust-analyzer', 'coc-explorer']
+
 set encoding=utf-8
 " Some servers have issues with backup files, see #649.
 set nobackup
@@ -257,3 +239,16 @@ nnoremap <C-b> :Buffers<Cr>
 nnoremap <C-g> :GFiles<Cr>
 nnoremap <leader>c :Commits<Cr>
 
+" sneak
+let g:sneak#s_next = 1
+
+" signify
+set updatetime=100
+let g:signify_sign_add               = '+'
+let g:signify_sign_delete            = '_'
+let g:signify_sign_delete_first_line = '‾'
+let g:signify_sign_change            = '~'
+
+" coc explorer
+nnoremap <silent> <leader>e :CocCommand explorer<CR>
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif

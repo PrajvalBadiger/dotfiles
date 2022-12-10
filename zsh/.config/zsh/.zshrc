@@ -3,12 +3,15 @@
 export TERM="xterm-256color"
 #export PATH=~/.local/bin/:/home/prajval/.cargo/bin:$PATH
 
+autoload bashcompinit
+bashcompinit
+
 # source aliases
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zsh_aliases" ] && source "$XDG_CONFIG_HOME/zsh/zsh_aliases"
 
 # fzf
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh
-export FZF_DEFAULT_OPTS="--reverse --height=~20% --border=sharp"
+#export FZF_DEFAULT_OPTS="--reverse --height=~20% --border=sharp"
 export FZF_DEFAULT_COMMAND='find . \! \( -type d -path ./.git -prune \) \! -type d \! -name '\''*.tags'\'' -printf '\''%P\n'\'
 # load colors
 autoload -U colors && colors

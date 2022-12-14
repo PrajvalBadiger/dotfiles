@@ -11,14 +11,15 @@ bashcompinit
 
 # fzf
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh
-#export FZF_DEFAULT_OPTS="--reverse --height=~20% --border=sharp"
-export FZF_DEFAULT_COMMAND='find . \! \( -type d -path ./.git -prune \) \! -type d \! -name '\''*.tags'\'' -printf '\''%P\n'\'
+# export FZF_DEFAULT_COMMAND='find . \! \( -type d -path ./.git -prune \) \! -type d \! -name '\''*.tags'\'' -printf '\''%P\n'\'
+export FZF_DEFAULT_COMMAND='rg --files'
+
 # load colors
 autoload -U colors && colors
-. /home/prajval/.cache/wal/colors.sh
 
 # prompt 
 PROMPT='%F{red}%1~%f '
+
 # git prompt
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }

@@ -1,9 +1,9 @@
 !! Set a default font and font size as below:
-/* *.font: Terminus:size=14:style=Bold */
-*.font: Hermit:size=12:style=Regular
-*.dmenufont: Terminus:size=14:style=Bold
-dwm.realgap: 10
-dwm.gappx: 10
+*.font: Terminus:size=10:style=Bold
+/* *.font: Hermit:size=8:style=Regular */
+*.dmenufont: Terminus:size=10:style=Bold
+dwm.realgap: 5
+dwm.gappx: 5
 /* *.font: Hack:size=12 */
 /* *.font: CascadiaCodePL:size=14 */
 /* *.font: FiraCode Nerd Font:size=12 */
@@ -21,7 +21,7 @@ dwm.gappx: 10
 /* white	7	15 */
 
 
-#include "wal/colors.Xresources"
+#include "/home/prajval/.cache/wal/colors.Xresources"
 /* !! gruvbox: */
 /* *.color0: #1d2021 */
 /* *.color1: #504945 */

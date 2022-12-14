@@ -1,7 +1,10 @@
 #!/bin/sh
 
-#xset r rate 250 30 # increase key repeat speed
-xrandr --output Virtual1 --mode 1920x1080 & # set res
+sudo rmmod pcspkr
+sudo rfkill unblock all
+xbacklight -set 10
+xset r rate 250 30 # increase key repeat speed
+xrandr --output eDPI --mode 1366x768 & # set res
 wal -R # restore wallpaper
 
 # sync CLIPBOARD and PRIMARY selection

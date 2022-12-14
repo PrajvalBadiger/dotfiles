@@ -11,7 +11,7 @@ dwm_nm () {
     CONNAME=$(nmcli -a | grep 'Wired connection' | awk 'NR==1{print $1}')
 	[ "$CONNAME" = "" ] && icon="" || icon=" "
 	[ "$CONNAME" = "" ] && CONNAME=$(nmcli -t -f active,ssid dev wifi | grep '^yes' | sed 's|.*:||')
-	[ "$CONNAME" = "" ] && echo "" || echo "$icon$CONNAME"
+	[ "$CONNAME" = "" ] && echo "" || echo "$icon $CONNAME"
 }
 
 update() {

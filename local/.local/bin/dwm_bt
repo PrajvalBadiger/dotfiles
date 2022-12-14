@@ -2,7 +2,8 @@
 
 # dependency dmenu-bluetooth
 
-bt_status="$(dmenu-bluetooth --status | awk '{print $2}')"
-icon=""
-
+#bt_status="$(dmenu-bluetooth --status | awk '{print $2}')"
+#icon=""
+icon=""
+bt_status=$(bluetoothctl devices Connected | cut -d ' ' -f3-)
 echo "$icon $bt_status"

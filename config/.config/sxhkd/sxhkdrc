@@ -45,30 +45,22 @@ super + shift + s
 	screenshot select
 
 # power off menu
-super + p
+#super + p
+alt + 4
 	power_off
 
-# volume control
-super + u
-	volumeControl up; pkill -RTMIN+20 dwmblocks;
-
-super + shift + u
-	volumeControl down; pkill -RTMIN+20 dwmblocks;
-
-super + shift + m
-	volumeControl mute; pkill -RTMIN+20 dwmblocks;
 # toggle compositor
 super + n
 	toggle_picom
 
 # Toggle mute
 XF86AudioMute
-    volumeControl mute; kill -RTMIN+20 dwmblocks;
+    volumeControl mute; pkill -RTMIN+20 dwmblocks;
 	
 # Change volume
 XF86Audio{Raise,Lower}Volume
-    volumeControl {up,down}; kill -RTMIN+20 dwmblocks;
+    volumeControl {up,down}; pkill -RTMIN+20 dwmblocks;
 
 # Change Brightness
 XF86MonBrightness{Up,Down}
-	brightnessControl {up,down}; kill -RTMIN+30 dwmblocks;
+	brightnessControl {up,down}; pkill -RTMIN+30 dwmblocks;

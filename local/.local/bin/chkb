@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# switch between qwerty and dvorak
+
+curr=$(setxkbmap -print | grep -o dvorak)
+[ "$curr" == "dvorak" ] \
+    && setxkbmap -layout us && xmodmap ~/.config/x11/xmodmap \
+    || setxkbmap -layout us -variant dvorak && xmodmap ~/.config/x11/xmodmap
+# if [ "$curr" == "dvorak" ]; then
+#     setxkbmap -layout us && xmodmap ~/.config/x11/xmodmap
+# else
+#     setxkbmap -layout us -variant dvorak && xmodmap ~/.config/x11/xmodmap
+# fi    

@@ -15,13 +15,15 @@
 
 # configure keys
 
+xmodmap -e 'keycode 9 = grave'
 xmodmap -e 'keycode 66 = Escape'
-xmodmap -e 'keycode 9 = Caps_Lock'
+xmodmap -e 'keycode 105 = Caps_Lock'
 
 # clear caps lock because even after remap the caps lock
 #+ behaves as caps lock
-
-xmodmap -e 'clear lock'
+xmodmap -e 'clear Lock'
+xmodmap -e 'keycode 112 = End'
+xmodmap -e 'keycode 117 = Delete'
 
 # make the changes persistent across reboots
 

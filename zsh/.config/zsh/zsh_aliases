@@ -15,10 +15,18 @@ alias cl='clear'
 alias v='vim'
 alias vi='vim'
 
+# tmux
+alias ta='tmux attach'
+
 # cd 
 alias cdwm='cd $HOME/.local/src/dwm/'
 alias csrc='cd $HOME/.local/src/'
 alias clb='cd $HOME/.local/bin/'
+
+# keyboard layout
+alias xl='xmodmap ~/.config/x11/xmodmap'
+alias asdf='setxkbmap -layout us -variant dvorak && xmodmap ~/.config/x11/xmodmap'
+alias aoeu='setxkbmap -layout us && xmodmap ~/.config/x11/xmodmap'
 
 # dwm
 alias fullclean='make clean && rm -f config.h && git reset --hard origin/main'

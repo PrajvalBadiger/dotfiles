@@ -1,7 +1,8 @@
 #!/bin/sh
 
-sudo rmmod pcspkr
+#sudo rmmod pcspkr
 sudo rfkill unblock all
+[[ -f ~/.config/x11/xmodmap ]] && xmodmap ~/.config/x11/xmodmap
 xbacklight -set 10
 xset r rate 250 30 # increase key repeat speed
 xrandr --output eDPI --mode 1366x768 & # set res
@@ -12,9 +13,9 @@ autocutsel -fork -selection CLIPBOARD &
 autocutsel -fork -selection PRIMARY &
 
 xrdb -I${XDG_CACHE_HOME:-$HOME/.cache} $XDG_CONFIG_HOME/x11/xresources # load Xresources
-
+sxhkd -m -1 &
 # Auto start apps
-autostart="dwmblocks dunst unclutter sxhkd clipmenud picom"
+autostart="dwmblocks dunst unclutter clipmenud picom"
 
 for program in $autostart; do
 	pidof -s "$program" || "$program" &

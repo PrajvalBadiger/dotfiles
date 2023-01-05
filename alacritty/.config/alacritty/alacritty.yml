@@ -30,7 +30,7 @@ window:
     x: 10
     y: 10
 
-    opacity: 1.0
+  opacity: 0.7
 
 
       #colors:
@@ -99,22 +99,23 @@ window:
       #
 font:
   normal:
-    family: Hermit
+    family: Jet Brains Mono
     style: Regular
 
   bold:
-    family: Hermit
+    family: Jet Brains Mono
+
     style: Bold
 
   italic:
-    family: Hermit
+    family: Jet Brains Mono
     style: Italic
 
   bold_italic:
-    family: Hermit
+    family: Jet Brains Mono
     style: Bold Italic
 
-  size: 14
+  size: 9
 
 
 # Key bindings
@@ -133,27 +134,27 @@ Key_bindings:
 # BEGIN ACE
 colors:
   primary:
-    background: '#090637'
-    foreground: '#a4bee8'
+    background: '#131821'
+    foreground: '#a8cadb'
   cursor:
-    text:       '#090637'
-    cursor:     '#a4bee8'
+    text:       '#131821'
+    cursor:     '#a8cadb'
   normal:
-    black:      '#090637'
-    red:        '#4B62A8'
-    green:      '#113DC3'
-    yellow:     '#2B61D6'
-    blue:       '#4E6FD6'
-    magenta:    '#308FF5'
-    cyan:       '#6B92C1'
-    white:      '#a4bee8'
+    black:      '#131821'
+    red:        '#576D90'
+    green:      '#5379A5'
+    yellow:     '#598BB4'
+    blue:       '#6C8FAF'
+    magenta:    '#728AA2'
+    cyan:       '#619CC2'
+    white:      '#a8cadb'
   bright:
-    black:      '#7285a2'
-    red:        '#4B62A8'
-    green:      '#113DC3'
-    yellow:     '#2B61D6'
-    blue:       '#4E6FD6'
-    magenta:    '#308FF5'
-    cyan:       '#6B92C1'
-    white:      '#a4bee8'
+    black:      '#758d99'
+    red:        '#576D90'
+    green:      '#5379A5'
+    yellow:     '#598BB4'
+    blue:       '#6C8FAF'
+    magenta:    '#728AA2'
+    cyan:       '#619CC2'
+    white:      '#a8cadb'
 # END ACE

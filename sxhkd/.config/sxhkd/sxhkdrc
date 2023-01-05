@@ -22,7 +22,7 @@ super + r
 
 # open file browser
 super + e
-	$TERMINAL -e nnn
+	$TERMINAL -e lf
 
 # open BROWSER
 super + w

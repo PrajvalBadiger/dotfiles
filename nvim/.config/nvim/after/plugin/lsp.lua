@@ -27,8 +27,8 @@ vim.keymap.set({ "i", "s" }, "<c-j>", function()
 end, { silent = true })
 
 vim.keymap.set({ "i", "s" }, "<c-k>", function()
-    if ls.jumpable( -1) then
-        ls.jump( -1)
+    if ls.jumpable(-1) then
+        ls.jump(-1)
     end
 end, { silent = true })
 
@@ -36,13 +36,13 @@ end, { silent = true })
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp.defaults.cmp_mappings({
-        ['<C-b>'] = cmp.mapping.scroll_docs( -4),
-        ['<C-f>'] = cmp.mapping.scroll_docs(4),
-        ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-        ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-        ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-        ["<C-Space>"] = cmp.mapping.complete(),
-    })
+    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
+    ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
+    ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+    ["<C-Space>"] = cmp.mapping.complete(),
+})
 
 -- disable completion with tab
 -- this helps with copilot setup
@@ -89,3 +89,9 @@ lsp.setup()
 vim.diagnostic.config({
     virtual_text = true,
 })
+
+-- require("lsp-format").setup {
+--     c = {
+--         tab_width = 4,
+--     }
+-- }

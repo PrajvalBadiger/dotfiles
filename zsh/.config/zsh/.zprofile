@@ -6,7 +6,8 @@ export PATH=~/.local/bin/:/home/prajval/.cargo/bin:$PATH
 # Default programs:
 export EDITOR=/usr/bin/vim
 export TERMINAL="alacritty"
-export BROWSER="firefox"
+export BROWSER="brave-browser-beta"
+export MANPAGER="env MAN_PN=1 vim -M +MANPAGER -"
 
 # ~/ Clean-up:
 export XDG_CONFIG_HOME="$HOME/.config"

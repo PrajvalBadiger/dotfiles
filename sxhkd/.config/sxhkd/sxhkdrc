@@ -6,7 +6,7 @@ super + Escape
 
 # terminal emulator
 super + Return
-	$TERMINAL
+	spawn-alacritty-cwd
 
 # program launcher
 super + d
@@ -48,6 +48,13 @@ super + shift + s
 #super + p
 alt + 4
 	power_off
+
+# lock screen
+super + l
+	$TERMINAL -e slock
+
+super + shift + m
+	set_monitor
 
 # toggle compositor
 super + n

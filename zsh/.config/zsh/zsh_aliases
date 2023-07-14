@@ -30,6 +30,9 @@ alias xl='xmodmap ~/.config/x11/xmodmap'
 alias asdf='setxkbmap -layout us -variant dvorak && xmodmap ~/.config/x11/xmodmap'
 alias aoeu='setxkbmap -layout us && xmodmap ~/.config/x11/xmodmap'
 
+# extend display
+alias exd='xrandr --output eDP1 --primary --mode  1366x768 --output HDMI1 --mode 1920x1080 --above eDP1'
+
 # dwm
 alias fullclean='make clean && rm -f config.h && git reset --hard origin/main'
 alias mkins='make && sudo make clean install'

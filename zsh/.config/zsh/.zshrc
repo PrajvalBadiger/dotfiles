@@ -1,7 +1,7 @@
 
 ## exports
 export TERM="xterm-256color"
-#export PATH=~/.local/bin/:/home/prajval/.cargo/bin:$PATH
+export PATH=~/go/bin/:$PATH
 
 autoload bashcompinit
 bashcompinit
@@ -80,3 +80,9 @@ bindkey '^e' edit-command-line
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^[^M' autosuggest-accept
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Auto start tmux
+#[ -z "$TMUX"  ] && { {tmux has-session 2>/dev/null && tmux attach } || exec tmux new-session;}
+
+# z directory jumper
+. $HOME/.local/bin/z.sh

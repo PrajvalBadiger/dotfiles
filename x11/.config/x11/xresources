@@ -1,14 +1,15 @@
 !! Set a default font and font size as below:
-*.font: Terminus:size=10:style=Bold
+/* *.font: Terminus:size=10:style=Bold */
 /* *.font: Hermit:size=8:style=Regular */
-*.dmenufont: Terminus:size=10:style=Bold
-dwm.realgap: 5
-dwm.gappx: 5
+*.font: JetBrainsMono:size=10
+*.dmenufont: Terminus:size=14:style=Bold
+dwm.realgap: 0
+dwm.gappx: 0
+dwm.topbar: 1
 /* *.font: Hack:size=12 */
 /* *.font: CascadiaCodePL:size=14 */
 /* *.font: FiraCode Nerd Font:size=12 */
 /* *.font: FiraCode iScript:size=12 */
-/* *.font: JetBrainsMono Nerd Font:size=12
 /* *.font: JoyPixels:size=12 */
 /* name		dark	light */
 /* black	0	8 */

@@ -3,10 +3,10 @@
     follow = keyboard
     width = 370
     height = 350
-    offset = 0x40
+    offset = 0x25
     padding = 10
     horizontal_padding = 10
-    transparency = 15
+    transparency = 50
     font = Hermit 12
     format = "<b>%s</b>\n%b"
 

@@ -49,3 +49,10 @@ vim.keymap.set("n", "k", "gk")
 
 vim.keymap.set("n", "<", "<gv", { noremap = true })
 vim.keymap.set("n", ">", ">gv", { noremap = true })
+
+
+-- pandoc to generate a pdf for markdown files
+
+vim.keymap.set("n", "<leader>gm",
+    "<cmd>silent !sudo docker run --rm --volume './:/data' --user $(id -u):$(id -g) pandoc/latex % -o %:r.pdf<CR>",
+    { noremap = true })

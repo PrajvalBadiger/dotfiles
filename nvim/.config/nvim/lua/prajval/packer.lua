@@ -73,4 +73,6 @@ return require('packer').startup(function(use)
     use { 'stevearc/vim-arduino' }
 
     use { 'stevearc/dressing.nvim' }
+
+    use { 'ThePrimeagen/git-worktree.nvim' }
 end)

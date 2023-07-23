@@ -85,4 +85,5 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 #[ -z "$TMUX"  ] && { {tmux has-session 2>/dev/null && tmux attach } || exec tmux new-session;}
 
 # z directory jumper
+export _Z_DATA=$XDG_CACHE_HOME/.z
 . $HOME/.local/bin/z.sh

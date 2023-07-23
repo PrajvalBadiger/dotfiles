@@ -3,9 +3,15 @@ alias gb='git branch'
 alias gco='git checkout'
 alias vo='ls | fzf --height=~40% --border | xargs -or vim'
 alias gs='git status'
+alias gss='git status -s'
 alias gd='git diff'
+alias gc='git commit'
+alias ga='git add'
 alias gl='git log --all --graph --decorate'
+alias gla='git log --all --graph --decorate --oneline'
+alias glo="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gvd='git difftool --tool=vimdiff'
+alias gw='git worktree'
 
 alias ls='ls --color=auto'
 alias l='ls --color=auto'
@@ -37,4 +43,9 @@ alias exd='xrandr --output eDP1 --primary --mode  1366x768 --output HDMI1 --mode
 alias fullclean='make clean && rm -f config.h && git reset --hard origin/main'
 alias mkins='make && sudo make clean install'
 
+# file manager
 alias lf='lfub'
+
+# pandoc docker container
+alias docpan=\
+'sudo docker run --rm -v "$(pwd):/data" -u $(id -u):$(id -g) pandoc/latex'

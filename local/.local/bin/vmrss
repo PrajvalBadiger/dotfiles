@@ -1,0 +1,19 @@
+#! /bin/bash
+
+vmrss () {
+        p=$1
+        if [[ -z $p ]]
+        then
+            echo -e "Usage: vmrss <pid>"
+            exit 1
+        fi
+        echo "pid choosen: $p"
+        while true
+        do
+                sync
+                cat /proc/$p/status | grep --color=auto VmRSS | grep --color=auto -o '[0-9]\+' | awk '{print $1/1024 " MB"}'
+                sleep 1
+        done
+}
+
+vmrss $1

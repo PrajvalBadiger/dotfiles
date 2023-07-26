@@ -99,23 +99,22 @@ window:
       #
 font:
   normal:
-    family: Jet Brains Mono
+    family: FiraCode Nerd Font
     style: Regular
 
   bold:
-    family: Jet Brains Mono
-
+    family: FiraCode Nerd Font
     style: Bold
 
   italic:
-    family: Jet Brains Mono
+    family: FiraCode Nerd Font
     style: Italic
 
   bold_italic:
-    family: Jet Brains Mono
+    family: FiraCode Nerd Font
     style: Bold Italic
 
-  size: 9
+  size: 12
 
 
 # Key bindings
@@ -131,30 +130,31 @@ Key_bindings:
     - { key: C,        mods: Control|Alt,  action: Copy        }
     - { key: Return,   mods: Control, action: SpawnNewInstance }
     - { key: T,        mods: Control, action: SpawnNewInstance }
+
 # BEGIN ACE
 colors:
   primary:
-    background: '#131821'
-    foreground: '#a8cadb'
+    background: '#061019'
+    foreground: '#b1bcc1'
   cursor:
-    text:       '#131821'
-    cursor:     '#a8cadb'
+    text:       '#061019'
+    cursor:     '#b1bcc1'
   normal:
-    black:      '#131821'
-    red:        '#576D90'
-    green:      '#5379A5'
-    yellow:     '#598BB4'
-    blue:       '#6C8FAF'
-    magenta:    '#728AA2'
-    cyan:       '#619CC2'
-    white:      '#a8cadb'
+    black:      '#061019'
+    red:        '#2E4658'
+    green:      '#3A5364'
+    yellow:     '#435C6C'
+    blue:       '#4C5D68'
+    magenta:    '#506877'
+    cyan:       '#5E7684'
+    white:      '#b1bcc1'
   bright:
-    black:      '#758d99'
-    red:        '#576D90'
-    green:      '#5379A5'
-    yellow:     '#598BB4'
-    blue:       '#6C8FAF'
-    magenta:    '#728AA2'
-    cyan:       '#619CC2'
-    white:      '#a8cadb'
+    black:      '#7b8387'
+    red:        '#2E4658'
+    green:      '#3A5364'
+    yellow:     '#435C6C'
+    blue:       '#4C5D68'
+    magenta:    '#506877'
+    cyan:       '#5E7684'
+    white:      '#b1bcc1'
 # END ACE

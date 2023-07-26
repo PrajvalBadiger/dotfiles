@@ -4,18 +4,22 @@ lsp.preset("recommended")
 
 lsp.ensure_installed({
     'rust_analyzer',
+    'clangd',
+    'lua_ls',
+    'pylsp',
+    'arduino_language_server',
 })
 
--- -- Fix Undefined global 'vim'
--- lsp.configure('sumneko_lua', {
---     settings = {
---         Lua = {
---             diagnostics = {
---                 globals = { 'vim' }
---             }
---         }
---     }
--- })
+-- Fix Undefined global 'vim'
+lsp.configure('lua_ls', {
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { 'vim' }
+            }
+        }
+    }
+})
 
 local ls = require('luasnip')
 
@@ -89,9 +93,3 @@ lsp.setup()
 vim.diagnostic.config({
     virtual_text = true,
 })
-
--- require("lsp-format").setup {
---     c = {
---         tab_width = 4,
---     }
--- }

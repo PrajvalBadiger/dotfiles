@@ -9,6 +9,7 @@ else
         ~/workspace/c/traning/training/assignment/phase1/c/string/ \
         ~/workspace/c/traning/training/assignment/phase1/ds/sorting_algs/ \
         ~/.dotfiles/ \
+        ~/workspace/docker/ \
         -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 

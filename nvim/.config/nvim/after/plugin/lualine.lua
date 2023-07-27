@@ -21,7 +21,7 @@ require('lualine').setup {
         lualine_a = { 'mode' },
         lualine_b = { 'branch', 'diff', 'diagnostics' },
         lualine_c = { 'filename' },
-        lualine_x = { 'encoding', 'filetype' },
+        lualine_x = { 'Arduino_status()', 'encoding', 'filetype' },
         lualine_y = { 'progress' },
         lualine_z = { 'location' }
     },
@@ -38,3 +38,18 @@ require('lualine').setup {
     inactive_winbar = {},
     extensions = { 'quickfix', 'fugitive' }
 }
+
+function Arduino_status()
+    if vim.bo.filetype ~= "arduino" then
+        return ""
+    end
+    local port = vim.fn["arduino#GetPort"]()
+    local line = string.format("[%s]", vim.g.arduino_board)
+    if vim.g.arduino_programmer ~= "" then
+        line = line .. string.format(" [%s]", vim.g.arduino_programmer)
+    end
+    if port ~= 0 then
+        line = line .. string.format(" (%s:%s)", port, vim.g.arduino_serial_baud)
+    end
+    return line
+end

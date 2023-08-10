@@ -85,4 +85,5 @@ return require('packer').startup(function(use)
     use { 'stevearc/dressing.nvim' }
 
     use { 'ThePrimeagen/git-worktree.nvim' }
+    use { 'ThePrimeagen/vim-be-good' }
 end)

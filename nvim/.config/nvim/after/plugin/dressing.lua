@@ -16,7 +16,6 @@ require('dressing').setup({
         start_in_insert = true,
 
         -- These are passed to nvim_open_win
-        anchor = "SW",
         border = "rounded",
         -- 'editor' and 'win' will default to being centered
         relative = "cursor",
@@ -88,6 +87,14 @@ require('dressing').setup({
             },
         },
 
+        -- Options for fzf-lua
+        fzf_lua = {
+            -- winopts = {
+            --   height = 0.5,
+            --   width = 0.5,
+            -- },
+        },
+
         -- Options for nui Menu
         nui = {
             position = "50%",
@@ -112,7 +119,6 @@ require('dressing').setup({
         -- Options for built-in selector
         builtin = {
             -- These are passed to nvim_open_win
-            anchor = "NW",
             border = "rounded",
             -- 'editor' and 'win' will default to being centered
             relative = "editor",
@@ -121,6 +127,8 @@ require('dressing').setup({
             win_options = {
                 -- Window transparency (0-100)
                 winblend = 10,
+                cursorline = true,
+                cursorlineopt = "both",
             },
 
             -- These can be integers or a float between 0 and 1 (e.g. 0.4 for 40%)

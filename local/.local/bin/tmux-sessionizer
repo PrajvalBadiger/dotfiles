@@ -5,9 +5,12 @@ if [[ $# -eq 1 ]]; then
 else
     selected=$(find ~/workspace/ ~/workspace/notes/ ~/workspace/rust/COMP6991/weekly_exercies/ \
         ~/workspace/rust/ ~/workspace/DSA/algorithms/ ~/workspace/arduino/ \
+        ~/workspace/lua/ \
         ~/workspace/linux/ ~/workspace/rust/cmd_line_prgms/ \
         ~/workspace/c/traning/training/assignment/phase1/c/string/ \
         ~/workspace/c/traning/training/assignment/phase1/ds/sorting_algs/ \
+        ~/workspace/arduino/esp/gps \
+        ~/workspace/arduino/esp/cam \
         ~/.dotfiles/ \
         ~/workspace/docker/ \
         -mindepth 1 -maxdepth 1 -type d | fzf)

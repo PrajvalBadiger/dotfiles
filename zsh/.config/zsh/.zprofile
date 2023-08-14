@@ -7,7 +7,8 @@ export PATH=~/.local/bin/:/home/prajval/.cargo/bin:$PATH
 export EDITOR=/usr/bin/vim
 export TERMINAL="alacritty"
 export BROWSER="brave-browser-beta"
-export MANPAGER="env MAN_PN=1 vim -M +MANPAGER -"
+export MANPAGER="/bin/sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
+
 
 # ~/ Clean-up:
 export XDG_CONFIG_HOME="$HOME/.config"

@@ -2,6 +2,5 @@ clear Lock
 keycode   9 = grave asciitilde grave asciitilde grave asciitilde
 keycode 105 = Caps_Lock NoSymbol Caps_Lock NoSymbol Caps_Lock
 keycode  66 = Escape NoSymbol Escape NoSymbol Escape
-add control = Escape
 keycode 112 = End NoSymbol End NoSymbol End
 keycode 117 = Delete NoSymbol Delete NoSymbol Delete

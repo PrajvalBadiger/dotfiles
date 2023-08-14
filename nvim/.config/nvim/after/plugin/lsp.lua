@@ -21,9 +21,8 @@ lsp.configure('lua_ls', {
     }
 })
 
-local ls = require('luasnip')
-
 -- <c-j> and <c-k> for expansion
+local ls = require('luasnip')
 vim.keymap.set({ "i", "s" }, "<c-j>", function()
     if ls.expand_or_jumpable() then
         ls.expand_or_jump()
@@ -35,7 +34,6 @@ vim.keymap.set({ "i", "s" }, "<c-k>", function()
         ls.jump(-1)
     end
 end, { silent = true })
-
 
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
@@ -90,5 +88,5 @@ lsp.setup()
 
 vim.diagnostic.config({
     virtual_text = true,
-    update_in_insert = true,
+    update_in_insert = false,
 })

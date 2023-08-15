@@ -86,4 +86,6 @@ return require('packer').startup(function(use)
 
     use { 'ThePrimeagen/git-worktree.nvim' }
     use { 'ThePrimeagen/vim-be-good' }
+
+    use { 'tpope/vim-surround' }
 end)

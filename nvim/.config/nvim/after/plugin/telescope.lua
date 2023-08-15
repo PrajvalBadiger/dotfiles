@@ -49,7 +49,7 @@ require("telescope").setup {
         },
 
         selection_strategy = "reset",
-        sorting_strategy = "descending",
+        sorting_strategy = "ascending",
         scroll_strategy = "cycle",
         color_devicons = true,
 

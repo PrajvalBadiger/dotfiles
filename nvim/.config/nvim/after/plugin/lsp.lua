@@ -50,7 +50,13 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 -- cmp_mappings['<S-Tab>'] = nil
 
 lsp.setup_nvim_cmp({
-    mapping = cmp_mappings
+    mapping = cmp_mappings,
+    sources = {
+        { name = 'luasnip',  priority = 40 },
+        { name = 'nvim_lsp', priority = 30 },
+        { name = 'buffer',   priority = 20 },
+        { name = 'path',     priority = 10 },
+    },
 })
 
 lsp.set_preferences({

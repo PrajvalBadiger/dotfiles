@@ -3,13 +3,13 @@
 #sudo rmmod pcspkr
 sudo rfkill unblock all
 [[ -f ~/.config/x11/xmodmap ]] && xmodmap ~/.config/x11/xmodmap
-xbacklight -set 10
+xbacklight -set 50
 xset r rate 250 30 # increase key repeat speed
 #xrandr --output eDPI --mode 1366x768 & # set res
 set_monitor &
 wal -R # restore wallpaper
 amixer -D pulse set Master on > /dev/null
-amixer -D pulse sset Master 5% > /dev/null
+amixer -D pulse sset Master 50% > /dev/null
 
 # sync CLIPBOARD and PRIMARY selection
 autocutsel -fork -selection CLIPBOARD &

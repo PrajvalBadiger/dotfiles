@@ -45,8 +45,7 @@ super + shift + s
 	screenshot select
 
 # power off menu
-#super + p
-alt + 4
+super + p
 	power_off
 
 # lock screen

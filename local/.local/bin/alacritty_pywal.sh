@@ -85,7 +85,7 @@ fi
 { sed "/^# BEGIN ACE/ r /dev/stdin" "$CFG" > "$tempfile" <<EOF
 colors:
   primary:
-    background: '$color0'
+    background: '0x282828'
     foreground: '$color7'
   cursor:
     text:       '$color0'

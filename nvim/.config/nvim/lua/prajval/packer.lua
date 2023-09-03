@@ -88,5 +88,16 @@ return require('packer').startup(function(use)
     use { 'ThePrimeagen/vim-be-good' }
 
     use { 'tpope/vim-surround' }
-    use {'PrajvalBadiger/lualine-arduino-status'}
+    use { 'PrajvalBadiger/lualine-arduino-status' }
+
+    use({
+        "folke/noice.nvim",
+        requires = {
+            "MunifTanjim/nui.nvim",
+            "rcarriga/nvim-notify",
+        },
+    })
+
+    use({ "folke/zen-mode.nvim" })
+
 end)

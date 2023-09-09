@@ -23,7 +23,7 @@ return require('packer').startup(function(use)
     }
 
     use({
-        'morhetz/gruvbox',
+        'ellisonleao/gruvbox.nvim',
         as = 'gruvbox',
         config = function()
             vim.cmd('colorscheme gruvbox')

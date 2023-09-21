@@ -6,7 +6,7 @@ lsp.ensure_installed({
     'rust_analyzer',
     'clangd',
     'lua_ls',
-    'pylsp',
+    'tsserver',
     'arduino_language_server',
 })
 
@@ -16,11 +16,11 @@ lsp.configure('lua_ls', {
         Lua = {
             diagnostics = {
                 globals = { 'vim' }
-            }
+            },
+            hint = { enable = true },
         }
     }
 })
-
 -- <c-j> and <c-k> for expansion
 local ls = require('luasnip')
 vim.keymap.set({ "i", "s" }, "<c-j>", function()
@@ -89,6 +89,8 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename, opts)
     vim.keymap.set("n", "<leader>dl", "<cmd>Telescope diagnostics<CR>", { buffer = 0 })
 end)
+
+lsp.setup_servers({ 'tsserver' })
 
 lsp.setup()
 

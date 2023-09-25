@@ -61,3 +61,12 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     group = highlight_group,
     pattern = '*',
 })
+
+-- [[ Lsp Inlay Hints ]]
+-- Enabled by default, toggle with <leader>ih
+if vim.lsp.inlay_hint then
+    vim.lsp.inlay_hint(0, nil)
+    vim.keymap.set('n', '<leader>ih', function()
+        vim.lsp.inlay_hint(0, nil)
+    end, { desc = 'Toggle Inlay Hints' })
+end

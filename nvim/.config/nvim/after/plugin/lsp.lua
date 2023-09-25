@@ -21,6 +21,43 @@ lsp.configure('lua_ls', {
         }
     }
 })
+
+lsp.configure('rust_analyzer', {
+    settings = {
+        Rust = {
+            hint = { enable = true },
+        }
+    }
+})
+
+
+lsp.configure('tsserver', {
+    settings = {
+        javascript = {
+            inlayHints = {
+                includeInlayEnumMemberValueHints = true,
+                includeInlayFunctionLikeReturnTypeHints = true,
+                includeInlayFunctionParameterTypeHints = true,
+                includeInlayParameterNameHints = 'all',
+                includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+                includeInlayPropertyDeclarationTypeHints = true,
+                includeInlayVariableTypeHints = true,
+            },
+        },
+        typescript = {
+            inlayHints = {
+                includeInlayEnumMemberValueHints = true,
+                includeInlayFunctionLikeReturnTypeHints = true,
+                includeInlayFunctionParameterTypeHints = true,
+                includeInlayParameterNameHints = 'all',
+                includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+                includeInlayPropertyDeclarationTypeHints = true,
+                includeInlayVariableTypeHints = true,
+            },
+        },
+    }
+})
+
 -- <c-j> and <c-k> for expansion
 local ls = require('luasnip')
 vim.keymap.set({ "i", "s" }, "<c-j>", function()
@@ -89,8 +126,6 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename, opts)
     vim.keymap.set("n", "<leader>dl", "<cmd>Telescope diagnostics<CR>", { buffer = 0 })
 end)
-
-lsp.setup_servers({ 'tsserver' })
 
 lsp.setup()
 

@@ -2,9 +2,17 @@
 ## exports
 export TERM="xterm-256color"
 export PATH=~/go/bin/:$PATH
+export PATH=$HOME/.platformio/penv/bin:$PATH
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 
 autoload bashcompinit
 bashcompinit
+
+autoload -Uz compinit
+compinit
+which kubectl 1>/dev/null 2>/dev/null && source <(kubectl completion zsh)
 
 # source aliases
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/zsh_aliases" ] && source "$XDG_CONFIG_HOME/zsh/zsh_aliases"
@@ -87,3 +95,6 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # z directory jumper
 export _Z_DATA=$XDG_CACHE_HOME/.z
 . $HOME/.local/bin/z.sh
+
+# bun completions
+[ -s "/home/prajval/.bun/_bun" ] && source "/home/prajval/.bun/_bun"

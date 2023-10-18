@@ -6,7 +6,7 @@ export PATH=~/.local/bin/:/home/prajval/.cargo/bin:$PATH
 # Default programs:
 export EDITOR=/usr/bin/nvim
 export TERMINAL="alacritty"
-export BROWSER="brave-browser-beta"
+export BROWSER="firefox"
 export MANPAGER="/bin/sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 
 

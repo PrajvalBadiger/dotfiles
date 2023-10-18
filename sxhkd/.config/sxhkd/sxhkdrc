@@ -33,6 +33,14 @@ super + shift + w
 	networkmanager_dmenu
 	#$TERMINAL -e sudo nmtui
 
+# open discord
+super + shift + d
+    discord
+
+# open telegram
+super + shift + t
+    Telegram
+
 # run bluetooth dmenu script
 super + shift + b
 	dmenu-bluetooth; kill -RTMIN+4 dwmblocks;
@@ -62,7 +70,7 @@ super + n
 # Toggle mute
 XF86AudioMute
     volumeControl mute; pkill -RTMIN+20 dwmblocks;
-	
+
 # Change volume
 XF86Audio{Raise,Lower}Volume
     volumeControl {up,down}; pkill -RTMIN+20 dwmblocks;

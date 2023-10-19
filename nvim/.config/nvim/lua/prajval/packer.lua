@@ -91,4 +91,13 @@ return require('packer').startup(function(use)
     use { 'PrajvalBadiger/lualine-arduino-status' }
 
     use({ "folke/zen-mode.nvim" })
+
+    use {
+        "folke/which-key.nvim",
+        config = function()
+            vim.o.timeout = true
+            vim.o.timeoutlen = 300
+            require("which-key").setup {}
+        end
+    }
 end)

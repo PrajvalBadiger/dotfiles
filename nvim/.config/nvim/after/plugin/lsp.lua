@@ -114,17 +114,20 @@ lsp.on_attach(function(client, bufnr)
         return
     end
 
-    vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-    vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-    vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-    vim.keymap.set("n", "<leader>vws", vim.lsp.buf.workspace_symbol, opts)
-    vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float, opts)
-    vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
-    vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
-    vim.keymap.set("n", "<leader>vca", vim.lsp.buf.code_action, opts)
-    vim.keymap.set("n", "<leader>vrr", vim.lsp.buf.references, opts)
-    vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename, opts)
-    vim.keymap.set("n", "<leader>dl", "<cmd>Telescope diagnostics<CR>", { buffer = 0 })
+    vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = bufnr, remap = false, desc = 'Go to Definition' })
+    vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { buffer = bufnr, remap = false, desc = 'Go to Implementation' })
+    vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = bufnr, remap = false, desc = 'Display hover information' })
+    vim.keymap.set("n", "<leader>vws", vim.lsp.buf.workspace_symbol,
+        { buffer = bufnr, remap = false, desc = 'View Workspace Symobols' })
+    vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float,
+        { buffer = bufnr, remap = false, desc = 'View Diagnostic' })
+    vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { buffer = bufnr, remap = false, desc = 'Go to Prev diagnostics' })
+    vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { buffer = bufnr, remap = false, desc = 'Go to Next diagnostics' })
+    vim.keymap.set("n", "<leader>vca", vim.lsp.buf.code_action,
+        { buffer = bufnr, remap = false, desc = 'View Code Actions' })
+    vim.keymap.set("n", "<leader>vrr", vim.lsp.buf.references, { buffer = bufnr, remap = false, desc = 'View references' })
+    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { buffer = bufnr, remap = false, desc = 'Rename symbol' })
+    vim.keymap.set("n", "<leader>dl", "<cmd>Telescope diagnostics<CR>", { buffer = 0, desc = 'View Diagnostic list' })
 end)
 
 lsp.setup()

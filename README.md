@@ -21,7 +21,7 @@ This repo contains all my configurations and scripts. <br>
 Before Installation backup your dotfiles. Clone the repo in your home dir and create sym links using GNU stow.
 
 ```bash
-git clone https://github.com/PrajvalBadiger/dotfiles ~/.dotfiles/
+git clone --recurse-submodules https://github.com/PrajvalBadiger/dotfiles ~/.dotfiles/
 cd ~/.dotfiles/
 stow alacritty bash config picom shell sxhkd sxiv tmux vim wal x11 zsh
 ```

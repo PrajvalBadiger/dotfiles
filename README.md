@@ -23,13 +23,19 @@ Before Installation backup your dotfiles. Clone the repo in your home dir and cr
 ```bash
 git clone --recurse-submodules https://github.com/PrajvalBadiger/dotfiles ~/.dotfiles/
 cd ~/.dotfiles/
-stow alacritty bash config picom shell sxhkd sxiv tmux vim wal x11 zsh
+stow -t ~/ alacritty bash config picom shell sxhkd sxiv vim wal x11 zsh
 ```
 
 ## Neovim config Installation
 ```
 cd nvim-config
 stow -t ~/ nvim
+```
+
+## Tmux config Installation
+```
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+stow -t ~/ tmux
 ```
 
 ## Use below command to get shell scripts

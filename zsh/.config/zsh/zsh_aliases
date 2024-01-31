@@ -50,3 +50,14 @@ alias lf='lfub'
 # pandoc docker container
 alias docpan=\
 'sudo docker run --rm -v "$(pwd):/data" -u $(id -u):$(id -g) pandoc/latex'
+
+# docker aliases
+alias db='docker build'
+alias dr='docker run'
+alias dli='docker image ls'
+alias dlv='docker volume ls'
+alias dln='docker network ls'
+alias dps='docker ps'
+alias dri='docker rmi'
+alias drm='docker rm'
+alias drma='docker rm $(docker ps -qa)'

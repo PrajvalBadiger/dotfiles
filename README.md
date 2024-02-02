@@ -29,7 +29,7 @@ stow -t ~/ alacritty bash config picom shell sxhkd sxiv vim wal x11 zsh
 ## Neovim config Installation
 ```
 cd nvim-config
-stow -t ~/ nvim
+./dev
 ```
 
 ## Tmux config Installation

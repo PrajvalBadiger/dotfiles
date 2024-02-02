@@ -2,6 +2,7 @@
 ## exports
 export TERM="xterm-256color"
 export PATH=~/go/bin/:$PATH
+export GOPATH=$HOME/go/
 export PATH=$HOME/.platformio/penv/bin:$PATH
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
@@ -27,6 +28,7 @@ autoload -U colors && colors
 
 # prompt 
 PROMPT='%F{red}%1~%f '
+# PROMPT='%F{green}%n@%m:%F{blue}%~%f%F{reset} '
 
 # git prompt
 autoload -Uz vcs_info

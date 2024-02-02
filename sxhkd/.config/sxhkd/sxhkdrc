@@ -43,7 +43,10 @@ super + shift + t
 
 # run bluetooth dmenu script
 super + shift + b
-	dmenu-bluetooth; kill -RTMIN+4 dwmblocks;
+	blueman-manager
+
+super + shift + p
+	pavucontrol
 
 # Take screenshot
 super + s

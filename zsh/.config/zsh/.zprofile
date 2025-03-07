@@ -7,7 +7,6 @@ export PATH=~/.local/bin/:/home/prajval/.cargo/bin:$PATH
 export EDITOR=/usr/bin/nvim
 export TERMINAL="alacritty"
 export BROWSER="firefox"
-export MANPAGER="/bin/sh -c \"col -b | nvim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 
 
 # ~/ Clean-up:

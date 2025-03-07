@@ -1,8 +1,9 @@
 !! Set a default font and font size as below:
 *.font: Terminus:size=10:style=Bold
-/* *.font: Hermit:size=8:style=Regular */
+/* *.font: Hermit:size=10:style=Regular */
 /* *.font: JetBrainsMono:size=8 */
-*.dmenufont: Terminus:size=14:style=Bold
+/* *.dmenufont: Terminus:size=14:style=Bold */
+*.dmenufont: Hermit:size=10:style=Regular 
 dwm.realgap: 0
 dwm.gappx: 0
 dwm.topbar: 1

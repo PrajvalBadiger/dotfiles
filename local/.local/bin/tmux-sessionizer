@@ -13,6 +13,7 @@ else
         ~/workspace/arduino/esp/cam \
         ~/.dotfiles/ \
         ~/workspace/docker/ \
+        ~/workspace/go/ \
         ~/.local/src/dwm_build/ \
         ~/.local/src/ \
         -mindepth 1 -maxdepth 1 -type d | fzf)

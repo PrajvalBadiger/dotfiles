@@ -2,9 +2,9 @@
 
 #sudo rmmod pcspkr
 sudo rfkill unblock all
-[[ -f ~/.config/x11/xmodmap ]] && xmodmap ~/.config/x11/xmodmap
+# [[ -f ~/.config/x11/xmodmap ]] && xmodmap ~/.config/x11/xmodmap
 xbacklight -set 50
-xset r rate 250 30 # increase key repeat speed
+# xset r rate 250 30 # increase key repeat speed
 #xrandr --output eDPI --mode 1366x768 & # set res
 set_monitor &
 wal -R # restore wallpaper

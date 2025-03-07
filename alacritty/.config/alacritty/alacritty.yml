@@ -18,9 +18,9 @@ window:
   #
   # Specified in number of pixels.
   # If the position is not set, the window manager will handle the placement.
-  #position:
-  #  x: 0
-  #  y: 0
+  position:
+    x: 0
+    y: 0
 
   # Window padding (changes require restart)
   #
@@ -28,9 +28,12 @@ window:
   # by DPI and the specified value is always added at both opposing sides.
   padding:
     x: 10
-    y: 10
+    y: 1
 
-  opacity: 0.7
+  dynamic_padding: true
+  decorations: none
+
+  opacity: 0.9
 
 
       #colors:
@@ -99,62 +102,47 @@ window:
       #
 font:
   normal:
-    family: Terminus
+    family: Hermit
     style: Regular
 
   bold:
-    family: Terminus
+    family: Hermit
     style: Bold
 
   italic:
-    family: Terminus
+    family: Hermit
     style: Italic
 
   bold_italic:
-    family: Terminus
+    family: Hermit
     style: Bold Italic
 
-  size: 10
-
-
-# Key bindings
-Key_bindings:
-    - { key: Equals,   mods: Super, action: IncreaseFontSize }
-    - { Key: Subtract, mods: Super, action: DecreaseFontSize }
-    - { key: Key0,     mods: Super, action: ResetFontSize    }
-    - { key: PageUp,   mods: Shift,   action: ScrollPageUp   }
-    - { key: PageDown, mods: Shift,   action: ScrollPageDown }
-    - { key: End,      mods: Shift,   action: ScrollToBottom }
-    - { key: Home,     mods: Shift,   action: ScrollToTop    }
-    - { key: V,        mods: Control|Alt,  action: Paste       }
-    - { key: C,        mods: Control|Alt,  action: Copy        }
-    - { key: Return,   mods: Control, action: SpawnNewInstance }
-    - { key: T,        mods: Control, action: SpawnNewInstance }
+  size: 12
 
 # BEGIN ACE
 colors:
   primary:
-    background: '#061019'
-    foreground: '#b1bcc1'
+    background: '0x282828'
+    foreground: '#ebd8d3'
   cursor:
-    text:       '#061019'
-    cursor:     '#b1bcc1'
+    text:       '#070C08'
+    cursor:     '#ebd8d3'
   normal:
-    black:      '#061019'
-    red:        '#2E4658'
-    green:      '#3A5364'
-    yellow:     '#435C6C'
-    blue:       '#4C5D68'
-    magenta:    '#506877'
-    cyan:       '#5E7684'
-    white:      '#b1bcc1'
+    black:      '#070C08'
+    red:        '#BE8A74'
+    green:      '#256E8E'
+    yellow:     '#C06A88'
+    blue:       '#55ACAA'
+    magenta:    '#A3ACA4'
+    cyan:       '#E3A89D'
+    white:      '#ebd8d3'
   bright:
-    black:      '#7b8387'
-    red:        '#2E4658'
-    green:      '#3A5364'
-    yellow:     '#435C6C'
-    blue:       '#4C5D68'
-    magenta:    '#506877'
-    cyan:       '#5E7684'
-    white:      '#b1bcc1'
+    black:      '#a49793'
+    red:        '#BE8A74'
+    green:      '#256E8E'
+    yellow:     '#C06A88'
+    blue:       '#55ACAA'
+    magenta:    '#A3ACA4'
+    cyan:       '#E3A89D'
+    white:      '#ebd8d3'
 # END ACE
